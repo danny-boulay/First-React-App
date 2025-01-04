@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <div className="copyright">
-            <p>Made with love by Danny Boulay</p>
+            <p>Copyright Made with love by Danny Boulay</p>
         </div>
     );
 };
