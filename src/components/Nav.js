@@ -1,11 +1,11 @@
-function Nav() {
+const Nav = props => { //Arrow function
     return (
         <nav className="main-nav">
             <ul>
-                <li>Home</li>
-                <li>Articles</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li><a>Home</a></li>
+                <li><a>Articles</a></li>
+                <li><a>About</a></li>
+                <li><a>Contact</a></li>
             </ul>
         </nav>
     )

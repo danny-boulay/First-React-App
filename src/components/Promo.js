@@ -1,5 +1,4 @@
 function Promo(props) {
-    console.log(props);
     return (
         <div className="promo-section">
             <div>

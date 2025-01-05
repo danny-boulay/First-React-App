@@ -1,5 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
 import Nav from './components/Nav';
 import Promo from './components/Promo';
 import Intro1 from './components/Intro1';
@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
+      <Header/>
       <Nav/>
       <Promo name="Danny"/>
       <Intro1/>

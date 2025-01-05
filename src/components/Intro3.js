@@ -1,10 +1,26 @@
 function Intro3() {
     return (
         <div className="blog-post-intro">
-            <h2>What's the best way to style your React apps?</h2>
+            <h2>What are Ternary operators?</h2>
             <div>
-                <p>There are so many options to choose from. Here's a high-level overview of the popular ones.</p>
-                <p className="link">Read more...</p>
+                <p>Consider the following example...</p>
+                <pre className="code">
+                    <code>
+{`let name = 'Bob';
+if (name == 'Bob') {
+    console.log('Hello, Bob');
+} else {
+    console.log('Hello, Friend');
+}`}
+                    </code>
+                </pre>
+                <p>The code above can be written like this using Ternary operator...</p>
+                <pre className="code">
+                    <code>
+{`let name = 'Bob';
+name == 'Bob' ? console.log('Hello, Bob') : console.log('Hello, Friend');`}
+                    </code>
+                </pre>
             </div>
         </div>
     );

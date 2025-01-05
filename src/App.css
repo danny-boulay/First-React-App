@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -15,9 +15,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 2vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -35,4 +34,52 @@
   to {
     transform: rotate(360deg);
   }
+}
+/*Banner en dessous du navbar*/
+.promo-section {
+  line-height: 20px;
+  font-weight: bold;
+}
+
+/*Block de code pour faire les exemples*/
+.code {
+  text-align: left;
+  background-color: #282c34;
+  color: rgb(184, 221, 213);
+  border: solid rgb(50, 105, 112) 1px;
+  margin: 1rem;
+}
+
+/*Navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #282c34;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+  color: rgb(245, 245, 245);
+}
+
+/*Footer*/
+.copyright p {
+  border-top: 1px solid black;
 }

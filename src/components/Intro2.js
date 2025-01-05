@@ -4,7 +4,7 @@ function Intro2() {
             <h2>I love front-end web dev because...</h2>
             <div>
                 <p>In this blog post, I'll list 10 reasons why I love to work as a front-end developer.</p>
-                <p className="link">Read more...</p>
+                <p className="App-link">Read more...</p>
             </div>
         </div>
     )
