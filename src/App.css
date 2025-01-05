@@ -1,7 +1,9 @@
+/*Whole page*/
 .App {
   text-align: center;
 }
 
+/*Logo*/
 .App-logo {
   height: 10vmin;
   pointer-events: none;
@@ -13,6 +15,7 @@
   }
 }
 
+/*Header*/
 .App-header {
   background-color: #282c34;
   min-height: 2vh;
@@ -35,6 +38,7 @@
     transform: rotate(360deg);
   }
 }
+
 /*Banner en dessous du navbar*/
 .promo-section {
   line-height: 20px;
