@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Promo/>
+      <Promo name="Danny"/>
       <Intro1/>
       <Intro2/>
       <Intro3/>
