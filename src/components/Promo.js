@@ -2,8 +2,8 @@ function Promo(props) {
     return (
         <div className="promo-section">
             <div>
-                <h1>Don't miss this deal {props.name}!</h1>
-                <h2>Subscribe to my newsletter and get all the shop items at 50% off!</h2>
+                <h1> {props.promoData.heading} {props.promoData.name}!</h1>
+                <h2> {props.promoData.callToAction} {props.promoData.promo}</h2>
             </div>
         </div>
     )
