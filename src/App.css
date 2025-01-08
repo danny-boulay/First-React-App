@@ -3,14 +3,26 @@
   text-align: center;
 }
 
-div {
-  background-color: #282c34;
-  color: rgb(184, 221, 213);
-  padding: 0.4rem;
+#root div {
+  padding: 0.3rem;
 }
 
-div p {
+.dark {
+  background-color: #282c34;
   color: #fff;
+}
+
+.dark p{
+  color: rgb(184, 221, 213);
+}
+
+.light {
+  background-color: #fafafa;
+  color: #282c34;
+}
+
+.light p {
+  color: #4d4b49;
 }
 
 /*Logo*/
@@ -27,17 +39,21 @@ div p {
 
 /*Header*/
 .App-header {
-  background-color: #282c34;
   min-height: 2vh;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+}
+
+.dark .App-header{
+  background-color: #282c34;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.light .App-header {
+  background-color: #fafafa;
+  color: #282c34;
 }
 
 @keyframes App-logo-spin {
@@ -49,6 +65,53 @@ div p {
   }
 }
 
+/*Navbar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.dark ul {
+  background-color: #282c34;
+}
+
+.light ul {
+  background-color: #fafafa;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.dark li a {
+  color: white;
+}
+
+.light li a {
+  color: #282c34;
+}
+
+/* Change the link color to #111 (black) on hover */
+.dark li a:hover {
+  background-color: #111;
+}
+
+.light li a:hover {
+  background-color: #fce6b6;
+}
+
 /*Banner en dessous du navbar*/
 .promo-section {
   line-height: 20px;
@@ -58,46 +121,19 @@ div p {
 /*Block de code pour faire les exemples*/
 .code {
   text-align: left;
+}
+
+.dark .code {
   background-color: #282c34;
   color: rgb(184, 221, 213);
   border: solid rgb(50, 105, 112) 1px;
 }
 
-/*Navbar*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #282c34;
-  display: flex;
-  justify-content: center;
+.light .code {
+  background-color: #fafafa;
+  color: #b65e5e;
+  border: solid #b65e5e 1px;
 }
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 1rem 1.2rem;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-  color: rgb(245, 245, 245);
-}
-
-/*Footer*/
-.copyright p {
-  border-top: 1px solid;
-  padding-top: 1rem;
-}
-
 /*Button*/
 button {
   background-color: #fff;
@@ -112,8 +148,15 @@ button {
 
 button:hover {
   background-color: #fff;
+  transform: scale(1.02);
+}
+
+.dark button:hover{
   color: rgb(184, 221, 213);
-  transform: scale(1.04);
+}
+
+.light button:hover {
+  color: #ebb0b0;
 }
 
 form {
@@ -122,4 +165,24 @@ form {
   gap: 0.6rem;
   max-width: 10rem;
   margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+/*Footer*/
+.copyright p {
+  border-top: 1px solid;
+  padding: 1rem;
+  color: #fff;
+}
+
+/*Name*/
+.name {
+  text-transform: capitalize;
+}
+
+.dark .name {
+  color: rgb(184, 221, 213);
+}
+
+.light .name {
+  color: #ebb0b0;
 }

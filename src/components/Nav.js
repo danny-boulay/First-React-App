@@ -6,6 +6,7 @@ const Nav = props => { //Arrow function
                 <li><a>Articles</a></li>
                 <li><a>About</a></li>
                 <li><a>Contact</a></li>
+                <li><a>{props.name}</a></li>
             </ul>
         </nav>
     )

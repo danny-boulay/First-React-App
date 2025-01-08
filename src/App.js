@@ -8,12 +8,16 @@ import Intro3 from './components/Intro3';
 import Footer from './components/Footer';
 import Clicker from './components/Clicker';
 import NameUpdate from './components/NameUpdate';
-import { useState } from 'react';
+import ThemeToggle from './components/ThemeToggle';
+import React, { useState } from 'react';
+
+export const ThemeContext = React.createContext();
 
 function App() {
-  //Centralized data 
-  const [username, setUsername] = useState("Danny");
+  const [username, setUsername] = useState("Danny"); //hook
+  const [theme, setTheme] = useState('dark'); //hook
 
+  //Data centralisée pour le banner
   const promoData = {
     heading: "Don't miss this deal ",
     callToAction: "Subscribe and get",
@@ -21,18 +25,26 @@ function App() {
     name: username
   };
 
+//function pour toggleTheme
+const toggleTheme = () => {
+  setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+};
+
   return (
-    <div className="App">
-      <Header/>
-      <Nav/>
-      <Promo promoData={promoData}/>
-      <NameUpdate onUpdate={setUsername}/>
-      <Clicker/>
-      <Intro1/>
-      <Intro2/>
-      <Intro3/>
-      <Footer/>
-    </div>
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+      <div className={`App ${theme}`}>
+        <Header/>
+        <Nav name={promoData.name}/>
+        <ThemeToggle/>
+        <Promo promoData={promoData}/>
+        <NameUpdate onUpdate={setUsername}/>
+        <Clicker/>
+        <Intro1/>
+        <Intro2/>
+        <Intro3/>
+        <Footer/>
+      </div>
+    </ThemeContext.Provider>
   )
 }
 

@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from 'react'; //hook fournit par React
 
 function NameUpdate({ onUpdate }) {
-  const [name, setName] = useState('');
+  const [name, setName] = useState(''); //champ de saisi vide au départ
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name.trim()) {
-      onUpdate(name);
-      setName(''); // Réinitialise l'input après mise à jour
+  const handleSubmit = (e) => { //fonction qui est déclenchée à la soumission du formulaire
+    e.preventDefault(); //empêche le formulaire de recharger la page
+    if (name.trim()) { //supprime les espaces blancs et vérifie si le input est vide
+      onUpdate(name); //passe au parent (mise à jour)
+      setName(''); // réinitialise l'input après mise à jour
     }
   };
 
@@ -19,8 +19,8 @@ function NameUpdate({ onUpdate }) {
             type="text"
             id="username"
             value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="type your name"
+            onChange={(e) => setName(e.target.value)} //met à jour {name} avec la valeur saisie
+            placeholder="Type your name"
         />
         <div>
           <button type="submit">Update</button>
