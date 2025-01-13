@@ -171,7 +171,12 @@ form {
 .copyright p {
   border-top: 1px solid;
   padding: 1rem;
+}
+.dark .copyright p {
   color: #fff;
+}
+.light .copyright p {
+  color:#4d4b49;
 }
 
 /*Name*/

@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
+import CurrentMessage from './components/CurrentMessage';
 import Promo from './components/Promo';
 import Intro1 from './components/Intro1';
 import Intro2 from './components/Intro2';
@@ -37,6 +38,7 @@ function App() {
         <Header/>
         <Nav name={promoData.name}/>
         <ThemeToggle/>
+        <CurrentMessage/>
         <Routes>
           <Route path="/promo" element={<Promo promoData={promoData}/>}></Route>
           <Route path="/name" element={<NameUpdate onUpdate={setUsername}/>}></Route>
