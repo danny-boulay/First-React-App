@@ -10,6 +10,7 @@ import Clicker from './components/Clicker';
 import NameUpdate from './components/NameUpdate';
 import ThemeToggle from './components/ThemeToggle';
 import React, { useState } from 'react';
+import {Routes, Route} from 'react-router-dom';
 
 export const ThemeContext = React.createContext();
 
@@ -25,10 +26,10 @@ function App() {
     name: username
   };
 
-//function pour toggleTheme
-const toggleTheme = () => {
-  setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
-};
+  //function pour toggleTheme
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
 
   return (
     <ThemeContext.Provider value={{theme, toggleTheme}}>
@@ -36,12 +37,21 @@ const toggleTheme = () => {
         <Header/>
         <Nav name={promoData.name}/>
         <ThemeToggle/>
-        <Promo promoData={promoData}/>
-        <NameUpdate onUpdate={setUsername}/>
-        <Clicker/>
-        <Intro1/>
-        <Intro2/>
-        <Intro3/>
+        <Routes>
+          <Route path="/promo" element={<Promo promoData={promoData}/>}></Route>
+          <Route path="/name" element={<NameUpdate onUpdate={setUsername}/>}></Route>
+          <Route path="/clicker-game" element={<Clicker/>}></Route>
+          <Route 
+            path='/articles' 
+            element={
+              <>
+                <Intro1/>
+                <Intro2/>
+                <Intro3/>
+              </>
+            }>
+          </Route>
+        </Routes>
         <Footer/>
       </div>
     </ThemeContext.Provider>
