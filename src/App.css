@@ -134,6 +134,7 @@ li a {
   color: #b65e5e;
   border: solid #b65e5e 1px;
 }
+
 /*Button*/
 button {
   background-color: #fff;
@@ -159,6 +160,7 @@ button:hover {
   color: #ebb0b0;
 }
 
+/*Name Update*/
 form {
   display: flex;
   flex-direction: column; /* Aligne les éléments verticalement */
@@ -190,4 +192,38 @@ form {
 
 .light .name {
   color: #ebb0b0;
+}
+
+/*Clicker Cookie Game*/
+#cookie {
+  width: 25%;
+  animation: rotate 20s linear infinite;
+  transform-origin: center;
+  transition: transform 1s ease;
+}
+
+#cookie:hover {
+  animation: none;
+  transform: scale(1.1);
+}
+
+#disabled-cookie {
+  width: 25%;
+  filter: grayscale(100%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Moo Deng*/
+#moodeng div{
+  display: block;
+  margin: 0 auto;
+  height: 50vh !important;
 }
