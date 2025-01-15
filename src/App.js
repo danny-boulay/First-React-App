@@ -9,6 +9,7 @@ import Intro3 from './components/Intro3';
 import Footer from './components/Footer';
 import Clicker from './components/Clicker';
 import MooDeng from './components/MooDeng';
+import Poppy from './components/Poppy';
 import NameUpdate from './components/NameUpdate';
 import ThemeToggle from './components/ThemeToggle';
 import React, { useState } from 'react';
@@ -55,6 +56,7 @@ function App() {
             }>
           </Route>
           <Route path="/moodeng" element={<MooDeng/>}></Route>
+          <Route path="/poppy" element={<Poppy/>}></Route>
         </Routes>
         <Footer/>
       </div>

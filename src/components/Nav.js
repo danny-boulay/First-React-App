@@ -9,6 +9,7 @@ const Nav = props => { //Arrow function
                 <li><Link to="/articles">Articles</Link></li>
                 <li><Link to="/clicker-game">Clicker Game</Link></li>
                 <li><Link to="/moodeng">Moo Deng</Link></li>
+                <li><Link to="/poppy">Poppy</Link></li>
                 <li><Link to="/name">{props.name}</Link></li>
             </ul>
         </nav>

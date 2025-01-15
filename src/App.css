@@ -172,8 +172,10 @@ form {
 /*Footer*/
 .copyright p {
   border-top: 1px solid;
-  padding: 1rem;
+  padding: 1rem 0;
+  display: inline-block;
 }
+
 .dark .copyright p {
   color: #fff;
 }
